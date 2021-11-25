@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v5.js" defer></script> 
+    <script src="js/script.js" defer></script>
+    <script src="https://d3js.org/d3-selection.v1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+      <link rel="stylesheet" href="style.css">
+
+    <title>Candlestick Chart of BTC&ETH</title>
+</head>
+<body>
+
+    <div class="container" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">
+        <button onclick="getRates()" style="width: 20px; height: 20px"></button>
+        <div id="chart"></div>
+    </div>
+            <label for="currency">Choose currency: </label>
+            <select onchange="changeCoin(this)" name="currency" id="currency">
+              <option value="BTC-EUR">BTC-EURO</option>
+              <option value="ETH-EUR">ETH-EURO</option>
+            </select>
+            <label for="days">Days: </label>
+            <select onchange="changeDates(this)" name="days" id="days">
+              <option value="30">30</option>
+              <option value="60">60</option>
+              <option value="180">180</option>
+            </select>
+</body>
+</html>
